@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yugen — Уютный зимний Minecraft сервер</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Snowflakes container (covers entire viewport) -->
+    <div class="snowflakes" aria-hidden="true"></div>
+
+    <!-- Шапка (Header) -->
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <span class="material-icons">forest</span>
+                <span>Yugen</span>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li><a href="#about">О сервере</a></li>
+                    <li><a href="#benefits">Преимущества</a></li>
+                    <li><a href="#plugins">Плагины</a></li>
+                    <li><a href="#rules">Правила</a></li>
+                    <li><a href="#community">Сообщество</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный экран (Hero Section) -->
+    <section class="hero" id="hero">
+        <div class="container hero__container">
+            <div class="hero__badge">❄ 1.21.11 | 24/7 Vanilla+</div>
+            <h1 class="hero__title">Yugen</h1>
+            <p class="hero__subtitle">
+                Уютное место для спокойной игры с друзьями.
+            </p>
+            <div class="hero__ip-box" id="ip-box" data-clipboard-text="yugen.gomc.me">
+                <span class="material-icons">wifi</span>
+                yugen.gomc.me
+            </div>
+        </div>
+    </section>
+
+    <!-- О сервере -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">О сервере</h2>
+            <p class="about__text">
+                Yugen — это уютное классическое выживание в духе vanilla, где ценится атмосфера, а не гонка за ресурсами. Здесь вы найдете спокойствие зимней тайги, тепло костра и благородство оленей.
+            </p>
+            <div class="about__cards">
+                <div class="card">
+                    <h3 class="card__title">Ванилла</h3>
+                    <p class="card__text">Чистый игровой процесс без лишних сложностей, сохраняющий дух классического Minecraft.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card__title">Уют</h3>
+                    <p class="card__text">Лампавая атмосфера, которая заставит вас забыть о суете и наслаждаться каждым моментом в игре.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Преимущества</h2>
+            <div class="benefits__grid">
+                <div class="benefit-card">
+                    <span class="material-icons">balance</span>
+                    <h3 class="benefit-card__title">Честная игра</h3>
+                    <p class="benefit-card__text">Никакого доната, влияющего на баланс. Все игроки равны перед миром.</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="material-icons">security</span>
+                    <h3 class="benefit-card__title">Без гриферства</h3>
+                    <p class="benefit-card__text">Строгие правила защиты построек от разрушения и кражи.</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="material-icons">sports_martial_arts</span>
+                    <h3 class="benefit-card__title">PvP по согласию</h3>
+                    <p class="benefit-card__text">Сражения происходят только при взаимном согласии участников.</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="material-icons">people</span>
+                    <h3 class="benefit-card__title">Дружелюбное сообщество</h3>
+                    <p class="benefit-card__text">Всегда готовы помочь новичкам и поделиться опытом.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Плагины (с интерактивным фильтром на JS) -->
+    <section class="plugins" id="plugins">
+        <div class="container">
+            <h2 class="section-title">Плагины</h2>
+            <div class="plugins__filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="useful">Полезные</button>
+                <button class="filter-btn" data-filter="fun">Развлечения</button>
+                <button class="filter-btn" data-filter="social">Общение</button>
+            </div>
+            <div class="plugins__grid" id="plugins-grid">
+                <!-- Плагины будут заполнены через JS, но мы также можем разместить статично для простоты -->
+                <div class="plugin-card" data-category="social">
+                    <span class="material-icons">volunteer_activism</span>
+                    <h3 class="plugin-card__title">Голосовой чат</h3>
+                    <p class="plugin-card__text">Общайтесь с друзьями без внешних программ.</p>
+                </div>
+                <div class="plugin-card" data-category="useful">
+                    <span class="material-icons">forest</span>
+                    <h3 class="plugin-card__title">Рубка деревьев</h3>
+                    <p class="plugin-card__text">Ускоренная рубка деревьев для удобства сбора ресурсов.</p>
+                </div>
+                <div class="plugin-card" data-category="useful">
+                    <span class="material-icons">home</span>
+                    <h3 class="plugin-card__title">Телепортация /home</h3>
+                    <p class="plugin-card__text">Быстрый переход к вашему дому по команде /home.</p>
+                </div>
+                <div class="plugin-card" data-category="fun">
+                    <span class="material-icons">local_bar</span>
+                    <h3 class="plugin-card__title">Алкоголь</h3>
+                    <p class="plugin-card__text">Варите и употребляйте различные напитки для эффектов и удовольствия.</p>
+                </div>
+                <div class="plugin-card" data-category="fun">
+                    <span class="material-icons">pets</span>
+                    <h3 class="plugin-card__title">ПатПат - гладить животных</h3>
+                    <p class="plugin-card__text">Гладить дружелюбных животных и получать от этого радость.</p>
+                </div>
+                <div class="plugin-card" data-category="useful">
+                    <span class="material-icons">exchange</span>
+                    <h3 class="plugin-card__title">Телепортация /tpa</h3>
+                    <p class="plugin-card__text">Отправляйте запросы на телепортацию другим игрокам.</p>
+                </div>
+                <div class="plugin-card" data-category="useful">
+                    <span class="material-icons">shuffle</span>
+                    <h3 class="plugin-card__title">Рандомная ТП /rtp</h3>
+                    <p class="plugin-card__text">Телепортируйтесь в случайную точку мира для новых приключений.</p>
+                </div>
+                <div class="plugin-card" data-category="useful">
+                    <span class="material-icons">tune</span>
+                    <h3 class="plugin-card__title">Выбор PVP режима</h3>
+                    <p class="plugin-card__text">Переключайтесь между различными режимами PvP по вашему желанию.</p>
+                </div>
+                <div class="plugin-card" data-category="social">
+                    <span class="material-icons">emoji_emotions</span>
+                    <h3 class="plugin-card__title">Эмоции Emotecraft</h3>
+                    <p class="plugin-card__text">Выражайте эмоции через анимации и жесты.</p>
+                </div>
+                <div class="plugin-card" data-category="fun">
+                    <span class="material-icons">music_video</span>
+                    <h3 class="plugin-card__title">Музыка с YouTube</h3>
+                    <p class="plugin-card__text">Слушайте любимые треки прямо в игре через YouTube.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Правила сервера -->
+    <section class="rules" id="rules">
+        <div class="container">
+            <h2 class="section-title">Правила сервера</h2>
+            <div class="rules__warning">
+                <span class="material-icons">warning</span>
+                Уважай других
+            </div>
+            <div class="rules__content">
+                <div class="rules__column">
+                    <h3>Запрещено</h3>
+                    <ul>
+                        <li>Гриферство (разрушение и кража чужого имущества)</li>
+                        <li>Читы и модификации, дающие нечестное преимущество</li>
+                        <li>Лаг-машины и конструкции, вызывающие серьезные нагрузки на сервер</li>
+                    </ul>
+                </div>
+                <div class="rules__column">
+                    <h3>PvP и Бои</h3>
+                    <ul>
+                        <li>PvP разрешен только по взаимному согласию</li>
+                        <li>Запрещен спаун-килл и атаки на безоружных игроков</li>
+                        <li>Запрещено использовать уязвимости и баги в бою</li>
+                    </ul>
+                </div>
+                <div class="rules__column">
+                    <h3>Модификации</h3>
+                    <ul>
+                        <li>Разрешены только косметические и клиентские оптимизации (например, OptiFine, Sodium)</li>
+                        <li>Запрещены любые моды, влияющие на геймплей или дающие преимущество</li>
+                    </ul>
+                </div>
+                <div class="rules__column">
+                    <h3>Наказания</h3>
+                    <ul>
+                        <li>Бан по IP и железу за жесткие нарушения (читы, гриферство, угрозы)</li>
+                        <li>Временные мьюты и кики за менее серьезные проступки</li>
+                        <li>Предупреждения и беседы за первые нарушения</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сообщество -->
+    <section class="community" id="community">
+        <div class="container">
+            <h2 class="section-title">Сообщество</h2>
+            <div class="community__links">
+                <a href="https://t.me/yugennn_n" class="community__link">
+                    <span class="material-icons">telegram</span>
+                    Telegram
+                </a>
+                <a href="https://discord.gg/qpXXryjVS" class="community__link">
+                    <span class="material-icons">chat_bubble</span>
+                    Discord
+                </a>
+                <a href="https://www.tiktok.com/@sleepsnowww?_r=1&_t=ZS-9AWdGqhpJRc" class="community__link">
+                    <span class="material-icons">play_circle</span>
+                    TikTok
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как начать играть -->
+    <section class="howto" id="howto">
+        <div class="container">
+            <h2 class="section-title">Как начать играть</h2>
+            <ol class="howto__steps">
+                <li>
+                    <div class="howto__step-number">1</div>
+                    <div class="howto__step-content">
+                        <h3>Скопируй IP</h3>
+                        <p>Нажмите на блок с IP адресом в шапке сайта, чтобы скопировать его в буфер обмена.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="howto__step-number">2</div>
+                    <div class="howto__step-content">
+                        <h3>Запусти Minecraft 1.21.11</h3>
+                        <p>Убедитесь, что вы используете официальную версию Minecraft 1.21.11.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="howto__step-number">3</div>
+                    <div class="howto__step-content">
+                        <h3>Добавь сервер</h3>
+                        <p>В клиенте Minecraft перейдите в мультиплеер, нажмите «Добавить сервер» и вставьте скопированный IP.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="howto__step-number">4</div>
+                    <div class="howto__step-content">
+                        <h3>Заходи и наслаждайся!</h3>
+                        <p>Подключитесь к серверу и погрузитесь в мир зимнего уюта и спокойствия.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Футер (Footer) -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__logo">
+                <span class="material-icons">forest</span>
+                <span>Yugen</span>
+            </div>
+            <div class="footer__copyright">
+                © 2026 Yugen. Все права защищены.
+            </div>
+            <div class="footer__links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
